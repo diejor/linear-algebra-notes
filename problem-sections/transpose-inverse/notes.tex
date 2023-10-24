@@ -1,0 +1,71 @@
+\documentclass{extarticle}
+
+\usepackage{amsmath}
+
+\title{Problem section over Transpose and Permutation matrices}
+\author{Diego R.R.}
+\date{\today}
+
+\begin{document}
+\section{Symetric Matrices}
+$\begin{bmatrix}
+    1 & 3 \\
+    3 & 2
+\end{bmatrix}$
+
+\section{$LDL^T$ Factorization}
+$S = \begin{bmatrix}
+    1 & b \\
+    b & c
+\end{bmatrix}$
+$S = \begin{bmatrix}
+    2 & -1 & 0\\
+    -1 & 2 & -1\\
+    0 & -1 & 2
+\end{bmatrix}$
+
+$L = \begin{bmatrix}
+    1 & 0 & 0\\
+    \frac{1}{2} & 1 & 0\\
+    0 & \frac{2}{3} & 1
+\end{bmatrix}$
+
+\section{LU with permutations allowed}
+$A = \begin{bmatrix}
+    0 & 1 & 1\\
+    1 & 0 & 1\\
+    2 & 3 & 4   
+\end{bmatrix}$
+
+Find $P, L, U$ such that $PA = LU$
+
+First $P_{21} = \begin{bmatrix}
+    0 & 1 & 0\\
+    1 & 0 & 0\\
+    0 & 0 & 1
+\end{bmatrix}$
+
+$E_{31} = \begin{bmatrix}
+    1 & 0 & 0\\
+    0 & 1 & 0\\
+    -2 & 0 & 1
+\end{bmatrix}$
+
+$E_{32} = \begin{bmatrix}
+    1 & 0 & 0\\
+    0 & 1 & 0\\
+    0 & -3 & 1
+\end{bmatrix}$
+
+Second problem
+$A = \begin{bmatrix}
+    1 & c & 0 \\
+    2 & 4 & 1 \\
+    3 & 5 & 1 
+\end{bmatrix}$
+
+For what c values does A have a zero third pivot and what P is needed
+to fix temporal failure of elimination?
+
+
+\end{document}

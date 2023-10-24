@@ -1,0 +1,178 @@
+\chapter{Orthogonality}
+
+\section{Orthogonality of Vectors and Subspaces}
+
+\section{Projections onto Lines and Subspaces}
+
+We have that for a $\vec{b}$ outside of $C(A)$, its projection onto $C(A)$ is the closest vector to $\vec{b}$ in $C(A)$. The closest vector is denoted as $\vec{p} = A\hat{x}$. Such vector is related to $\vec{b}$ with vectors in the $N(A^T)$ subspace. We have that $\exists e \in N(A^T)$ such $e = \vec{b} - \vec{p}$.
+
+\subsection{Exercises}
+
+\begin{exercise}
+    Not completely sure what the extra symmetry condition $P^T = P$ for orthogonal projection means. We have that $P = \begin{bmatrix} 0 & 1 \\ 0 & 1 \end{bmatrix}$
+    \begin{enumerate}[a)]
+        \item $P^2 = 
+            \begin{bmatrix}
+                0 & 1 \\ 
+                0 & 1 
+            \end{bmatrix} 
+            \begin{bmatrix} 
+                0 & 1 \\ 
+                0 & 1 
+            \end{bmatrix} = 
+            \begin{bmatrix} 
+                row_1 \cdot col_1 & row_1 \cdot col_2 \\ 
+                row_2 \cdot col_1 & row_2 \cdot col_2 
+            \end{bmatrix} = 
+            \begin{bmatrix} 
+                0 & 1 \\ 
+                0 & 1 
+            \end{bmatrix}$
+            \\ %p PART II
+            $(I - P)^2 =
+            (\begin{bmatrix} 
+                1 & 0 \\ 
+                0 & 1
+            \end{bmatrix} -
+            \begin{bmatrix} 
+                0 & 1 \\ 
+                0 & 1
+            \end{bmatrix})^2 =
+            \begin{bmatrix} 
+                1 & -1 \\ 
+                0 & 0
+            \end{bmatrix}^2 = 
+            \begin{bmatrix} 
+                1 & -1 \\ 
+                0 & 0
+            \end{bmatrix}
+            \begin{bmatrix}
+                1 & -1 \\
+                0 & 0
+            \end{bmatrix} = 
+            \begin{bmatrix}
+                1 & -1 \\
+                0 & 0
+            \end{bmatrix}$
+        \item A vector $v \in C(P)$ is $v = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$ and a $w \in C(I - P)$ is $w = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$. Then, $v \cdot  w = 1$ which shows that $v$ and $w$ are not orthogonal $\therefore$ the spaces are not orthogonal.
+        \item $v^T P^T(I - P^T)w = v^T(P^T - P^T P)w = v^T(0)w = 0$
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    We have that $\hat x = \frac{a^T b}{a^T a}$. Then, $a^T b = 5$ and $a^T a = 3$. Then, $\hat x = \frac{5}{3}$. The projection is then $p = \hat x a = \frac{5}{3} \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}$.
+\end{exercise}
+
+
+\section{Least Squares Approximations}
+
+When solving the impossible solution $A\vec x = \vec b$, one possible trick to make the equation is by projecting $\vec b$ into the $C(A)$ subspace. This projection matrix $P = A(A^T A)^- A^T$ reduces the $\vec e \in N(A^T)$ to zero of $\vec b = \vec p + \vec e$, where $\vec p = A\hat x$. Now, we are solving $A \hat x = \vec p$ which is possible. The solution is $\hat x = (A^T A)^- A^T \vec b$.
+
+The squared error for any $\vec x \in \mathbb{R}^n$ is $||\vec b - A\vec x||^2$ = $||\vec p - A\vec x||^2 + ||\vec e||^2$. The minimum of this error is when $\vec x = \hat x = (A^T A)^- A^T \vec b$. The meaning of this equation is that it clearly identifies that the error of $||\vec b - A\vec x||^2$ is clearly minimized when $\vec p = A\vec x$ and this is satisfied when $\vec x = \hat x = (A^T A)^- A^T \vec b$. Substituting for $p$ we have that $||\vec b - \vec p||^2 = ||\vec e||^2$.
+
+One consideration is that the error we refer to the vector that separates $\vec b$ and $\vec p$ so called $\vec e = \vec b - \vec p$, is slightly different that the error $E$ that we refer to the squared error $E = ||\vec b - A\vec x||^2$. The error $E$ is only equal to $||\vec e||^2$ when $\vec x = \hat x$.
+
+This method is used when we have too many points to fit a line, in which case the model matrix $A$ with $m$ rows and $n$ columns is tall and thin ($m > n)$. Then, for a desired $\vec b \in R^m$ it might be outside of $C(A)$
+
+\subsection{Exercises}
+
+\begin{exercise}
+    $\hat x = (A^T A)^- A^T \vec b$. We are given that $\vec t = (0,1,3,4)$, so $ A = \begin{bmatrix} 
+            1 & 0 \\
+            1 & 1 \\
+            1 & 3 \\
+            1 & 4
+        \end{bmatrix}$
+    and $b = \begin{bmatrix}
+            0 \\
+            8 \\
+            8 \\
+            20
+    \end{bmatrix}$, I will find $A^T A$, then $(A^T A)^-$ and finally $A^T \vec b$.
+    \begin{equation} % A^T A
+        A^T A = \begin{bmatrix}
+            1 & 1 & 1 & 1 \\
+            0 & 1 & 3 & 4
+        \end{bmatrix}
+        \begin{bmatrix}
+            1 & 0 \\
+            1 & 1 \\
+            1 & 3 \\
+            1 & 4
+        \end{bmatrix} = \begin{bmatrix}
+            4 & 8 \\
+            8 & 26
+        \end{bmatrix}
+    \end{equation} % end of A^T A
+    \begin{equation} % (A^T A)^-
+        (A^T A)^- = \frac{1}{4 \cdot 26 - 8 \cdot 8} \begin{bmatrix}
+            26 & -8 \\
+            -8 & 4
+        \end{bmatrix} = \frac{1}{4} \begin{bmatrix}
+            13 & -4 \\
+            -4 & 2
+        \end{bmatrix} 
+    \end{equation} % end of (A^T A)^-
+    \begin{equation} % A^T b
+        A^T \vec b = \begin{bmatrix}
+            1 & 1 & 1 & 1 \\
+            0 & 1 & 3 & 4
+        \end{bmatrix}
+        \begin{bmatrix}
+            0 \\
+            8 \\
+            8 \\
+            20
+        \end{bmatrix} = \begin{bmatrix}
+            36 \\
+            112
+        \end{bmatrix}
+    \end{equation} % end of A^T b
+    Then, $\hat x = (A^T A)^- A^T \vec b = \frac{1}{4} \begin{bmatrix}
+        13 & -4 \\
+        -4 & 2
+    \end{bmatrix} \begin{bmatrix}
+        36 \\
+        112
+    \end{bmatrix} = \frac{1}{4} \begin{bmatrix}
+        13 \cdot 36 - 4 \cdot 112 \\
+        -4 \cdot 36 + 2 \cdot 112
+    \end{bmatrix} = \frac{1}{4} \begin{bmatrix}
+        0 \\
+        8
+    \end{bmatrix} = \begin{bmatrix}
+        0 \\
+        2
+    \end{bmatrix}$
+    For $\vec p = A \hat x = \begin{bmatrix}
+        1 & 0 \\
+        1 & 1 \\
+        1 & 3 \\
+        1 & 4
+    \end{bmatrix} \begin{bmatrix}
+        0 \\
+        2
+    \end{bmatrix} = \begin{bmatrix}
+        0 \\
+        2 \\
+        6 \\
+        8
+    \end{bmatrix}$ and $\vec e = \vec b - \vec p = \begin{bmatrix}
+        0 \\
+        8 \\
+        8 \\
+        20
+    \end{bmatrix} - \begin{bmatrix}
+        0 \\
+        2 \\
+        6 \\
+        8
+    \end{bmatrix} = \begin{bmatrix}
+        0 \\
+        6 \\
+        2 \\
+        12
+    \end{bmatrix}$.
+\end{exercise}
+
+ holaa buenos dias mucho gusto

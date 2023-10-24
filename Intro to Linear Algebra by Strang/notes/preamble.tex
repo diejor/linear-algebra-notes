@@ -1,0 +1,68 @@
+
+% basics
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage[shortlabels]{enumitem}
+\usepackage{marginnote}
+\usepackage{xcolor}
+\usepackage{parskip}
+
+
+\usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
+\newcommand\abs[1]{\left|#1\right|}
+\newcommand\floor[1]{\lfloor#1\rfloor}
+\newcommand\ceil[1]{\lceil#1\rceil}
+
+% theorems
+\usepackage{thmtools}
+\usepackage{mdframed}
+
+% define a box for definitions
+\declaretheoremstyle[
+    mdframed={
+        backgroundcolor=gray!10,
+        hidealllines=true,
+        innertopmargin=6pt,
+        innerbottommargin=6pt,
+        skipabove=\topsep,
+        skipbelow=\topsep
+    }
+]{graybox}
+
+\declaretheorem[
+    name=Theorem,
+    style=graybox
+]{theorem}
+
+\declaretheorem[
+    name=Corollary,
+    style=graybox
+]{corollary}
+
+\declaretheorem[
+    name=Definition,
+    style=graybox
+]{definition}
+
+\declaretheorem[
+    name=Algorithm,
+    style=graybox
+]{algorithm}
+
+\declaretheorem[name=Exercise,style=graybox]{exercise}
+
+\newenvironment{solution}{}{}
+\newenvironment{enumerateproblem}
+{
+    \begin{enumerate}[(a)]
+}{
+    \end{enumerate}
+}
+
+\newcommand{\resetcounters}{
+    \setcounter{theorem}{0}
+    \setcounter{corollary}{0}
+    \setcounter{definition}{0}
+    \setcounter{algorithm}{0}
+    \setcounter{exercise}{0}
+}
