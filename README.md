@@ -1,4 +1,4 @@
-# Linear Algebra Notes Repository
+# Linear Algebra Notes
 
 My notes collected studyingy Linear Algebra. Materials are covered from popular textbooks along with personal notes and homework solutions typed in the LaTex typesetting.
 The purpose of the repository was to organize my work done through my MATH 2418 course taken at Univesity of Texas at Dallas first semester of my freshman year.
