@@ -9,7 +9,7 @@ The purpose of the repository was to organize my work done through my MATH 2418 
 <table>
     <tr>
         <td>
-            <img src="./Intro%20to%20Linear%20Algebra%20by%20Strang/GILBERT-cover.jpg" alt="Intro to Linear Algebra by Strang" width="150"/>
+            <img src="https://math.mit.edu/~gs/linearalgebra/" alt="Intro to Linear Algebra by Strang" width="150"/>
         </td>
         <td>
             <b>Intro to Linear Algebra by Gilbert Strang</b><br/>
@@ -18,7 +18,7 @@ The purpose of the repository was to organize my work done through my MATH 2418 
     </tr>
     <tr>
         <td>
-            <img src="./Linear%20Algebra%20Done%20Right/LARD-cover.jpg" alt="Linear Algebra Done Right" width="150"/>
+            <img src="https://math.mit.edu/~gs/linearalgebra/" width="150"/>
         </td>
         <td>
             <b>Linear Algebra Done Right</b><br/>
@@ -26,3 +26,9 @@ The purpose of the repository was to organize my work done through my MATH 2418 
         </td>
     </tr>
 </table>
+
+### Intro to Linear Algebra by Gilbert Strang
+- Notes: This is the textbook used by the department to teach Linear Algebra. I used 5th edition but the class used 6th.
+
+### Linear Algebra Done Right
+An interesting approach to Linear Algebra that avoids the introduction of determinants to define LA in a more natural way.
