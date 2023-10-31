@@ -2,8 +2,6 @@
 
 This repository contains comprehensive notes and resources for studying Linear Algebra. It comprises material from popular textbooks along with personal notes, homework solutions, and specific topics covered in problem sections.
 
-## Repository Structure
-
 ### Intro to Linear Algebra by Gilbert Strang
 
 - **Textbook Versions**
