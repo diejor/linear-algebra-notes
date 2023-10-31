@@ -1,26 +1,15 @@
 # Linear Algebra Notes
 
-This repository contains comprehensive notes and resources for studying Linear Algebra. It comprises material from popular textbooks along with personal notes, homework solutions, and specific topics covered in problem sections.
+My notes collected from a comprehensive study of Linear Algebra. Materials are covered from popular textbooks along with personal notes and homework solutions typed in the LaTex typesetting.
+
+The purpose of the repository was to organize my work done through my MATH 2418 course taken at Univesity of Texas at Dallas first semester of my freshman year.
 
 ### Intro to Linear Algebra by Gilbert Strang
-
-- **Textbook Versions**
-  - 5th Edition
-  - 6th Edition
-  - Solutions for the 6th Edition
-
-- **Notes**
-  - LaTeX files for individual chapters can be found under `notes`.
-  - The compiled version of the notes is available in the same directory.
+- **6th Edition**
+- **Notes** this is the textbook used by the department to teach LA.
 
 ### Linear Algebra Done Right
-
-- **Textbook**
-  - Linear Algebra Done Right
-
-- **Notes**
-  - An additional note file related to the book.
-  - LaTeX files for individual chapters and the compiled version are available under `notes`.
+This textbook is an interesting approach to LA without introducing determinats in the spite of defining the theory in a more natural way.
 
 ### Homeworks
 
